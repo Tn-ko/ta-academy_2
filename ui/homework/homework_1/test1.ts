@@ -5,7 +5,7 @@
 
 type Person = {
   name?: string;
-  age?: number | unknown;
+  age?: number | string;
   isSuperHero?: boolean;
   occupation?: string;
 };
