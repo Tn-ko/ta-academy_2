@@ -81,7 +81,7 @@ Add your changes
 Then commit and push your changes to your local branch (not master!)
 
 ``` 
-git checkout status
+git status
 git add .
 git commit -m "your-commit-message"
 git push origin homework_1
