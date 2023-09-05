@@ -2,18 +2,16 @@ import { test, expect } from '@playwright/test';
 import { DataLayer } from '@Utils/dataLayer';
 
 test.describe('check event in Datalayer', () => {
-  test('check that event is created', async ({
-    page
-  }) => {
-    await page.context().addCookies([
-      {
-        name: 'OptanonAlertBoxClosed',
-        value: new Date().toISOString(),
-        url: 'https://ta-0000-gusa-desktop.gusadev.com/',// baseURL doesn't work for me(
-      },
-    ]);
-   await page.goto('https://ta-0000-gusa-desktop.gusadev.com/', { 
-      waitUntil: 'domcontentloaded',
+  test('check that event is created',  async ({ page, baseURL }) => {
+        await page.context().addCookies([
+            {
+                name: 'OptanonAlertBoxClosed',
+                value: new Date().toISOString(),
+                url: 'baseURL',
+            },
+        ]);
+        await page.goto('/', {
+            waitUntil: 'domcontentloaded',
     });
  
     await page.mouse.wheel(0, 5500);
