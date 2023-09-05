@@ -5,10 +5,10 @@ import { faker } from '@faker-js/faker';
 test.describe('check that we can create and edit account', () => {
     test('clik on the "My Account" and Create account', async ({ page, baseURL }) => {
         await page.context().addCookies([
-            {
-                name: 'OptanonAlertBoxClosed',
-                value: new Date().toISOString(),
-                url: 'baseURL',
+          {
+            name: 'OptanonAlertBoxClosed',
+            value: new Date().toISOString(),
+            url: 'baseURL',
             },
         ]);
         await page.goto('/', {
