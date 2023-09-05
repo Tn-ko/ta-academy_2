@@ -4,10 +4,10 @@ import { DataLayer } from '@Utils/dataLayer';
 test.describe('check event in Datalayer', () => {
   test('check that event is created',  async ({ page, baseURL }) => {
         await page.context().addCookies([
-            {
-                name: 'OptanonAlertBoxClosed',
-                value: new Date().toISOString(),
-                url: 'baseURL',
+          {
+            name: 'OptanonAlertBoxClosed',
+            value: new Date().toISOString(),
+            url: 'baseURL',
             },
         ]);
         await page.goto('/', {
