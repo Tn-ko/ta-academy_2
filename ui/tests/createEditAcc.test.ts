@@ -2,11 +2,6 @@ import { test, expect } from '@playwright/test';
 import { DataLayer } from '@Utils/dataLayer';
 import { faker } from '@faker-js/faker';
 
-const firstName = faker.person.firstName();
-const lastName = faker.person.lastName();
-const email = faker.internet.email();
-const password = faker.internet.password();
-
 test.describe('check that we can create and edit account', () => {
     test('clik on the "My Account" and Create account', async ({ page, baseURL }) => {
         await page.context().addCookies([
@@ -26,15 +21,15 @@ test.describe('check that we can create and edit account', () => {
         await createButton.click();
 
         await test.step('fill email and click Sign Up', async () => {
-            await page.getByPlaceholder('Email Address').fill(email);
+            await page.getByPlaceholder('Email Address').fill(faker.internet.email(););
             const signUp = page.locator('//button//span//span[contains(., "Sign Up")]');
             await signUp.click();
         });
 
         await test.step('create account and get event in Datalayer', async () => {
-            await page.getByPlaceholder('First name').fill(firstName);
-            await page.getByPlaceholder('Last name').fill(lastName);
-            await page.getByPlaceholder('Password').fill(password);
+            await page.getByPlaceholder('First name').fill(faker.person.firstName());
+            await page.getByPlaceholder('Last name').fill(faker.person.lastName());
+            await page.getByPlaceholder('Password').fill( faker.internet.password());
             const signUp = page.locator('//button//span//span[contains(., "Sign Up")]');
             await signUp.click();
 
