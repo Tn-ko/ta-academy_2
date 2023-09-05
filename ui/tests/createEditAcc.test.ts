@@ -8,15 +8,15 @@ const email = faker.internet.email();
 const password = faker.internet.password();
 
 test.describe('check that we can create and edit account', () => {
-    test('clik on the "My Account" and Create account', async ({ page }) => {
+    test('clik on the "My Account" and Create account', async ({ page, baseURL }) => {
         await page.context().addCookies([
             {
                 name: 'OptanonAlertBoxClosed',
                 value: new Date().toISOString(),
-                url: 'https://ta-0000-gusa-desktop.gusadev.com/',// baseURL doesn't work for me(
+                url: 'baseURL',
             },
         ]);
-        await page.goto('https://ta-0000-gusa-desktop.gusadev.com/', {
+        await page.goto('/', {
             waitUntil: 'domcontentloaded',
         });
         const myAccount = page.locator('//header//button[contains(., "My Account")]');
