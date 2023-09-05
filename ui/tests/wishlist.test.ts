@@ -2,12 +2,12 @@ import { test, expect } from '@playwright/test';
 import { DataLayer } from '@Utils/dataLayer';
 
 test.describe('check event in Datalayer', () => {
-  test('check that event is created', async ({ page }) => {
+  test('check that event is created', async ({ page, baseURL }) => {
     await page.context().addCookies([
       {
         name: 'OptanonAlertBoxClosed',
         value: new Date().toISOString(),
-        url: 'https://ta-0000-gusa-desktop.gusadev.com/',
+        url: 'baseURL',
       },
     ]);
     await page.goto('/', {
