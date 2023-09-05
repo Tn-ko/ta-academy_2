@@ -28,7 +28,8 @@ export const cartReducer = (
       };
     case Constants.OPEN_ADD_FORM:
       pushToDataLayer({
-        name: `Open form`,
+        name: "FormInteraction",
+        value: "Open"
       });
       return {
         ...state,
@@ -36,7 +37,8 @@ export const cartReducer = (
       };
     case Constants.CLOSE_ADD_FORM:
       pushToDataLayer({
-        name: `Close form`,
+        name: "FormInteraction",
+        value: "Close"
       });
       return {
         ...state,

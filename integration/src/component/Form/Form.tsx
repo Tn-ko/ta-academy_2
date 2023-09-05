@@ -133,7 +133,7 @@ export const Form: React.FC<FormP> = ({ addItem, formError }) => {
           />
         </Field>
         <div className="new-item-form__btns">
-          <button className={'btn btn_primary'}>Создать</button>
+          <button className={'btn btn_primary'}>Create</button>
         </div>
       </form>
     </div>

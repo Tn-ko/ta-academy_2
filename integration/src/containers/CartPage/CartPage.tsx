@@ -19,6 +19,7 @@ import { Form } from '../../component/Form/Form';
 import { useEffect } from 'react';
 import { Modal } from '../../component/Modal/Modal';
 import { StateT } from '../../redux/store/store';
+import {pushToDataLayer} from "../../dataLayer/dataLayer";
 
 export const CartPage: React.FC = () => {
   const cart = useSelector((state: StateT) => state.cart);
@@ -28,6 +29,15 @@ export const CartPage: React.FC = () => {
     // fetch Data
     dispatch(getItemsRequest());
   }, [dispatch]);
+
+  useEffect(() => {
+    if (cart.items.length === 0 && !cart.isLoading) {
+      pushToDataLayer({
+        name: `Cart is Empty`,
+        value: `Quantity of products: ${cart.items.length}`
+      });
+    }
+  }, [cart.items.length, cart.isLoading]);
 
   return (
     <Page title={'Shopping cart'}>
@@ -56,6 +66,7 @@ export const CartPage: React.FC = () => {
               ))
             ) : (
               <span>Cart is empty</span>
+
             )}
           </div>
           {cart.openAddForm && (
