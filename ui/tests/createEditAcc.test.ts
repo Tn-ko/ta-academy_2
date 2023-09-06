@@ -16,7 +16,7 @@ test.describe('check that we can create and edit account', () => {
 
         await test.step('fill email and click Sign Up', async () => {
             await page.getByPlaceholder('Email Address').fill(faker.internet.email());
-            const signUp = page.locator('//button//span//span[contains(., "Sign Up")]');
+            const signUp = page.locator('//button[contains(., "Sign Up")]');
             await signUp.click();
         });
 
@@ -66,4 +66,5 @@ test.describe('check that we can create and edit account', () => {
     });
 
 });
+
 
