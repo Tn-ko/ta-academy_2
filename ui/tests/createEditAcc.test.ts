@@ -44,7 +44,7 @@ test.describe('check that we can create and edit account', () => {
         console.log(await page.evaluate(() => window.dataLayer));
 
         await test.step('go to My Account', async () => {
-            const welcomeUser = page.locator('//header//button').nth(3);
+            const welcomeUser = page.locator('//header//button[contains(., "Welcome")]');
             await welcomeUser.click();
             const [window] = await page.getByLabel('Tooltip Content').all();
             const myAccount = window.locator('[href*="/customer/account"]').first();
