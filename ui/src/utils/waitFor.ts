@@ -6,7 +6,7 @@ export type WaitForOptions = {
     timeout: number;
     interval: number;
 };
-
+ 
 const defaultValues: WaitForOptions = {
     interval: 1000,
     timeout: 10000,
