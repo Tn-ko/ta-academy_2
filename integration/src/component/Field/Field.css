@@ -1,0 +1,23 @@
+.field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+.field:last-of-type {
+  margin-bottom: 0;
+}
+.field__label {
+  margin-bottom: 5px;
+}
+.field_error .input {
+  border: 1px solid #e5596d;
+}
+
+.error {
+  text-align: right;
+  color: #e5596d;
+}
+
+.input {
+  padding: 5px;
+}/*# sourceMappingURL=Field.css.map */

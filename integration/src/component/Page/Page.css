@@ -1,0 +1,23 @@
+.page__inside {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.header {
+  text-align: center;
+}
+
+.main {
+  flex-grow: 1;
+  width: 100%;
+  max-width: 800px;
+  min-width: 320px;
+  padding: 0 10px;
+  margin: auto;
+}
+
+.footer {
+  background: #002051;
+  height: 40px;
+}/*# sourceMappingURL=Page.css.map */

@@ -1,0 +1,27 @@
+.cart-item {
+  padding: 40px;
+  margin-bottom: 20px;
+  position: relative;
+  border-bottom: 1px solid #ccc;
+}
+.cart-item__body {
+  display: flex;
+  justify-content: space-between;
+  height: 100px;
+}
+.cart-item__price-for-one {
+  font-size: 12px;
+  font-style: italic;
+}
+.cart-item__actions {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.cart-item .cart-item__delete-btn {
+  background: url("../../assets/icons/delete_btn.svg") 50% 50% no-repeat;
+}
+.cart-item .cart-item__delete-btn:hover {
+  opacity: 0.6;
+}/*# sourceMappingURL=CartItem.css.map */

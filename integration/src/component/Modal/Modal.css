@@ -1,0 +1,21 @@
+.modal {
+  position: fixed;
+  background: rgba(0, 0, 0, 0.5);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.modal__inside {
+  background: white;
+  width: 100%;
+  max-width: 500px;
+  margin: 10px auto;
+  padding: 15px;
+  position: relative;
+}
+.modal__close-btn {
+  position: absolute;
+  right: 0;
+  top: 0;
+}/*# sourceMappingURL=Modal.css.map */

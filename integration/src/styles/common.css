@@ -1,0 +1,30 @@
+@charset "UTF-8";
+* {
+  box-sizing: border-box;
+}
+
+.btn {
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+}
+.btn_primary {
+  width: 150px;
+  padding: 5px;
+  background: #002051;
+  color: white;
+  border: 1px solid transparent;
+}
+.btn_primary:hover {
+  background: white;
+  color: #002051;
+  border: 1px solid #002051;
+}
+.btn_small {
+  background: #ссс;
+  width: 30px;
+  height: 30px;
+}
+.btn_small:hover {
+  opacity: 0.7;
+}/*# sourceMappingURL=common.css.map */
