@@ -8,19 +8,19 @@ export class CartModal extends Component {
         createBtn: './/button[contains(.,"Create")]',
     };
 
-    public async getCartName(): Promise<CartModal> {
+    public async getCartName(): Promise<Component> {
         const [nameInput] = await this.element.waitForXpath(this.selectors.nameInput);
-        return new CartModal(nameInput);
+        return new Component(nameInput);
     }
 
-    public async getCartPrice(): Promise<CartModal> {
+    public async getCartPrice(): Promise<Component> {
         const [priceInput] = await this.element.waitForXpath(this.selectors.priceInput);
-        return new CartModal(priceInput);
+        return new Component(priceInput);
     }   
 
-    public async getCartQuantity(): Promise<CartModal> {
+    public async getCartQuantity(): Promise<Component> {
         const [quantityInput] = await this.element.waitForXpath(this.selectors.quantityInput);
-        return new CartModal(quantityInput);
+        return new Component(quantityInput);
     } 
 
     public async createCartItem(): Promise<void> {
