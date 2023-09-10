@@ -37,22 +37,22 @@ describe('Open cart page, add cart item, fill all fields & press Create', () => 
         priceInput.input(data.price.toString());
         quantityInput.input(data.quantity.toString());
 
-        cartModal.createCartItem();
+        await cartModal.createCartItem();
 
         reporter.startStep('Check that a new product has been added corectly');
         const valueOfPrice = Number(priceInput.getAttribute('value'));
         const valueOfQuantity = Number(quantityInput.getAttribute('value'));
         const name = nameInput.getAttribute('value');
 
-        expect(await name).toStrictEqual(data.name);
-        expect(await valueOfPrice).toStrictEqual(data.price);
-        expect(await valueOfQuantity).toStrictEqual(data.quantity);
+        expect(name).toStrictEqual(data.name);
+        expect(valueOfPrice).toStrictEqual(data.price);
+        expect(valueOfQuantity).toStrictEqual(data.quantity);
         reporter.endStep();
 
         reporter.startStep('Check that a length of the cartList array has incremented by 1');
         const list = await cartPage.getCartList();
         const items = await list.getCartItems();
-        await expect(items.length).toBe(4);
+        expect(items.length).toBe(4);
         reporter.endStep();
 
         const [item] = await list.getCartItems();
@@ -61,7 +61,7 @@ describe('Open cart page, add cart item, fill all fields & press Create', () => 
         reporter.startStep('Check that the item is nt on the page after deleting.');
         const newList = await cartPage.getCartList();
         const newItems = await newList.getCartItems();
-        await expect(newItems.length).toBe(3);
+        expect(newItems.length).toBe(3);
         reporter.endStep();
     });
 });
