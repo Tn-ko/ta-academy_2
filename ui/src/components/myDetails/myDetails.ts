@@ -1,6 +1,5 @@
 import { Component } from '@Core/component';
 import { faker } from '@faker-js/faker';
-import type { Locator } from '@playwright/test';
 
 export class MyDetails extends Component {
     protected LOCATORS = {
@@ -30,10 +29,10 @@ export class MyDetails extends Component {
         await this.LOCATORS.saveButton.click();
         return newUserInfo;
     }
-    public getFirstNameInput(): Locator {
-        return this.LOCATORS.firstNameLoc;
+    public getFirstNameInput(): Promise<string> {
+        return await this.LOCATORS.firstNameLoc.inputValue();
     }
-    public getLastNameInput(): Locator {
-        return this.LOCATORS.lastNameLoc;
+    public getLastNameInput(): Promise<string> {
+        return await this.LOCATORS.lastNameLoc.inputValue();
     }
 } 
