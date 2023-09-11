@@ -4,7 +4,7 @@ import type { DataLayerEvent } from '@Utils/types/dataLayerEvent';
 import deepMatch from 'deep-match2';
 import type { Page } from 'playwright-core';
 import { expect } from '@playwright/test';
-
+ 
 export class DataLayer {
     public constructor(private page: Page) {}
 

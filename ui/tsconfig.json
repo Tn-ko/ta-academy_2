@@ -18,6 +18,8 @@
     },
     "strict": true
   },
+
   "include": ["src", "tests", ".eslintrc.js", "playwright.config.ts", "typescript", "homework"],
+
   "exclude": ["node_modules"]
 }

@@ -7,7 +7,7 @@ declare type LayerEvent = {
     deviceMemory?: string;
     hardwareConcurrency?: string;
     connection?: string;
-    prescriptionName?: string;
+    prescriptionName?: string; 
     filled_email?: string;
     'gtm.uniqueEventId': number;
 };
