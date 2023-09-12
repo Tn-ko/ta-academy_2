@@ -73,7 +73,7 @@ describe('Check dataLayer event after creating & deleting cart item', () => {
         reporter.endStep();
 
         const [item] = await list.getCartItems();
-        item.deleteCartItem();
+        await item.deleteCartItem();
 
         const newList = await cartPage.getCartList();
         const newItems = await newList.getCartItems();
