@@ -1,5 +1,5 @@
 import { Component } from '@Core/component';
-import { CartItem } from '@Components/cartPage/cartList/cartItem/cartItem';
+import { CartItem } from '@Components/cartPage/cartPage/cartList/cartItem/cartItem';
 
 export class CartList extends Component {
     protected selectors = {
